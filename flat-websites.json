@@ -1,0 +1,16 @@
+{
+  "websites": [
+    {
+      "name": "bgneuesheim",
+      "selector": "#content > div.immo",
+      "lastContent": "",
+      "url": "https://bgneuesheim.de/mietobjekte"
+    },
+    {
+      "name": "bauundheim",
+      "selector": "#objectsBody",
+      "lastContent": "",
+      "url": "https://wbgd.immosolve.eu/immosolve_presentation/themes/modern/immo.jsp?skipLocation=true&embedded=49ae49a23f67c759bf4fc791ba842aa2"
+    }
+  ]
+}
