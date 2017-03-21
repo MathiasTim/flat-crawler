@@ -11,6 +11,42 @@
       "selector": "#objectsBody",
       "lastContent": "",
       "url": "https://wbgd.immosolve.eu/immosolve_presentation/themes/modern/immo.jsp?skipLocation=true&embedded=49ae49a23f67c759bf4fc791ba842aa2"
+    },
+    {
+      "name": "bgc-cannstatt",
+      "selector": "#content",
+      "lastContent": "",
+      "url": "http://www.bgc-cannstatt.de/mieten/wohnungsangebote/index.html"
+    },
+    {
+      "name": "bgmuenster",
+      "selector": "#content",
+      "lastContent": "",
+      "url": "http://bg-muenster.de/mietangebote/angebote-in-stuttgart.html"
+    },
+    {
+      "name": "vdkbaugenossenschaft",
+      "selector": "#content immobilien",
+      "lastContent": "",
+      "url": "https://www.vdk-baugenossenschaft.de/wohnungen#wohnungen"
+    },
+    {
+      "name": "swsg",
+      "selector": "#objectsBody",
+      "lastContent": "",
+      "url": "https://hpm3.immosolve.eu/immosolve_presentation/pub/responsive/2704517/HP/immo.jsp?cpriceEnd=3000&amp;croomsEnd=6&amp;xdm_e=https://www.swsg.de&amp;xdm_c=default304&amp"
+    },
+    {
+      "name": "siedlungswerk",
+      "selector": "#filter_grid",
+      "lastContent": "",
+      "url": "https://www.siedlungswerk.de/immobilien/mieten/Wohnungen/alle/Stuttgart"
+    },
+    {
+      "name": "bwv-stuttgart",
+      "selector": "#page-content",
+      "lastContent": "",
+      "url": "https://www.bwv-stuttgart.de/angebote/immobilien/"
     }
   ]
 }

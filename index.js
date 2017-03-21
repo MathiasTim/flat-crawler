@@ -50,8 +50,11 @@ class FlatCrawler {
         .then((content) => {
           if (content !== flat.lastContent) {
             flat.lastContent = content;
+            console.log(`Found something new for ${flat.name} - ${new Date()}`);
             // notify
             resolve(flat);
+          } else {
+            console.log(`Nothing new found for ${flat.name} - ${new Date()}`);
           }
         })
         .catch((err) => console.error(err))
@@ -105,7 +108,7 @@ class FlatCrawler {
   }
 
   scheduler () {
-    schedule.scheduleJob('15 12 * * 1', () => {
+    schedule.scheduleJob('0 9,12,15,18 * * *', () => {
       console.log(`Scheduler started - ${new Date()}`);
       this.start();
     });
