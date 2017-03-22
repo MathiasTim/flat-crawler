@@ -33,6 +33,11 @@ class FlatCrawler {
     });
     Promise.all(promises)
     .then((changedFlats) => {
+      changedFlats = changedFlats.filter((flat) => {
+        if (flat) {
+          return flat;
+        }
+      });
       console.log(`found ${changedFlats.length} changed flats - ${new Date()}`);
       this.sendMail(changedFlats);
     });
@@ -55,9 +60,14 @@ class FlatCrawler {
             resolve(flat);
           } else {
             console.log(`Nothing new found for ${flat.name} - ${new Date()}`);
+            // resolve the promise with no flat
+            resolve();
           }
         })
-        .catch((err) => console.error(err))
+        .catch((err) => {
+          console.error(err);
+          resolve();
+        });
       });
     });
   };
