@@ -39,7 +39,9 @@ class FlatCrawler {
         }
       });
       console.log(`found ${changedFlats.length} changed flats - ${new Date()}`);
-      this.sendMail(changedFlats);
+      if (changedFlats.length) {
+        this.sendMail(changedFlats);
+      }
     });
   }
 
