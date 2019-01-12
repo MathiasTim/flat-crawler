@@ -7,4 +7,5 @@ logs
 node_modules
 
 mail-config.json
+bot-config.json
 .vscode

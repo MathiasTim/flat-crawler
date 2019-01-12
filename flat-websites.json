@@ -2,9 +2,9 @@
   "websites": [
     {
       "name": "bgneuesheim",
-      "selector": "#content > div.immo",
+      "selector": "#main-content",
       "lastContent": "",
-      "url": "https://bgneuesheim.de/mietobjekte"
+      "url": "https://bgneuesheim.de/angebote-details.html"
     },
     {
       "name": "bauundheim",
@@ -14,19 +14,19 @@
     },
     {
       "name": "bgc-cannstatt",
-      "selector": "#content",
+      "selector": "#c118",
       "lastContent": "",
-      "url": "http://www.bgc-cannstatt.de/mieten/wohnungsangebote/index.html"
+      "url": "http://www.bgc.de/mieten/#c117"
     },
     {
       "name": "bgmuenster",
-      "selector": "#content",
+      "selector": ".immomakler-archive.immomakler",
       "lastContent": "",
-      "url": "http://bg-muenster.de/mietangebote/angebote-in-stuttgart.html"
+      "url": "https://bg-muenster-mietangebote.immomio.de/immobilien/?post_type=immomakler_object"
     },
     {
       "name": "vdkbaugenossenschaft",
-      "selector": "#content immobilien",
+      "selector": ".content.immobilien",
       "lastContent": "",
       "url": "https://www.vdk-baugenossenschaft.de/wohnungen#wohnungen"
     },
@@ -44,7 +44,7 @@
     },
     {
       "name": "bwv-stuttgart",
-      "selector": "#page-content",
+      "selector": ".tx-bdm-immoscout24",
       "lastContent": "",
       "url": "https://www.bwv-stuttgart.de/angebote/immobilien/"
     }

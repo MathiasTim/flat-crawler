@@ -6,6 +6,7 @@ const cheerio = require('cheerio')
 const nodemailer = require('nodemailer')
 
 const mailConfig = require('./mail-config.json')
+const botConfig = require('./bot-config.json')
 const flatWebsites = require('./flat-websites.json').websites
 
 // create reusable transporter object using the default SMTP transport
@@ -40,7 +41,8 @@ class FlatCrawler {
       });
       console.log(`found ${changedFlats.length} changed flats - ${new Date()}`);
       if (changedFlats.length) {
-        this.sendMail(changedFlats);
+        // this.sendMail(changedFlats);
+        this.sendTelegramMessage(changedFlats);
       }
     });
   }
@@ -50,7 +52,7 @@ class FlatCrawler {
       console.log(`crawling ${flat.name} - ${new Date()}`);
       request(flat.url, (error, response, body) => {
         if (error) {
-          console.error(e.message);
+          console.error(error.message);
           return;
         }
         this.parseHtml(body, flat)
@@ -86,6 +88,19 @@ class FlatCrawler {
       }
     })
   };
+
+  sendTelegramMessage (changedFlats) {
+    changedFlats.forEach((flat) => {
+      const text = `New Flats found \xF0\x9F\x8F\xA0: [${flat.name}](${flat.url})`;
+      request(`${botConfig.url}${botConfig.token}/sendMessage?chat_id=${botConfig.chatId}&parse_mode=Markdown&text=${text}`, (error, response, body) => {
+        if (error) {
+          console.error(error.message);
+          return;
+        }
+        console.log(body);
+      })
+    });
+  }
 
   sendMail (changedFlats) {
     mailOptions.subject = `FlatCrawler - Found ${changedFlats.length} new objects 🏠 🎉`;
